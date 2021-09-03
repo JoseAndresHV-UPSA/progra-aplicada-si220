@@ -1,0 +1,27 @@
+*COMANDOS DE GIT PARA LA GESTIÓN DE CÓDIGO FUENTE EN AZURE DEVOPS*
+
+-En la Terminal de Visual Studio Code ingresar los siguientes comandos:
+1. git init 
+# Inicia el repositorio
+
+2. git add .
+# Agrega los archivos al Staging Area
+
+3. git remote add origin <url>
+# Indica donde se encuentra el repositorio remoto al que subiremos el código
+
+4. git commit -m "Primer commit"
+# Guarda los archivos en el repositorio local con un mensaje
+
+5. git push origin master
+# Sube los archivos al repositorio remoto
+
+-Repetir al finalizar cada User Story:
+6. git add .
+# Agrega los nuevos archivos o cambios al Staging Area
+
+7. git commit -m "UserStory/Tarea completado/agregado/implementado"
+# Guarda el nuevos archivos o cambios en el repositorio local con un mensaje
+
+8. git push origin master
+# Sube los nuevos archivos o cambios al repositorio remoto

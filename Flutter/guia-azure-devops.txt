@@ -1,0 +1,35 @@
+*GUIA DE PASOS PARA GESTIÓN DE TAREAS EN AZURE DEVOPS*
+
+1. Crear un nuevo proyecto
+   a) Darle un nombre
+   b) Ponerlo en privado 
+   c) Advanced -> Escoger "Agile"
+
+2. Agregar al docente al proyecto
+   a) Project settings -> Teams
+   b) Entrar a "Nombre-del-proyecto" Team
+   c) Add -> Buscar "paulocesarloayza@upsa.edu.bo" -> Save
+
+3. Dar permisos al docente en la organización
+   a) Organization settings -> Users
+   b) Buscar "paulocesarloayza@upsa.edu.bo" -> More Options (...)
+   c) Change access level -> Seleccionar Basic
+
+4. Crear las tareas
+   a) Boards -> Backlogs
+   b) Cambiar Stories a Features
+   c) Crear Feature y asignarte: (+) New work item
+      # Tarea general (Objetivo principal)
+   d) Crear User Stories dentro del Feature y asignarte: (+) Add User Stories 
+      # Tareas especificas (Objetivos especificos)
+   e) Crear Tasks dentro de User Stories y asignarte: (+) Add Tasks
+      # Subtareas
+
+5. Subir el proyecto al Repositorio
+   a) Repos -> Seguir los pasos [1-5] de la "guia-comandos-git.txt"
+
+6. Mover los Cards (User Stories) según su estado:
+   a) Active: Al momento de estarla realizando
+   b) Marcar con check las Tasks al momento de completarse
+   c) Resolved: Al momento de terminar el funcionamiento de la tarea
+   d) Closed: Al momento de finalizar e integrar -> Seguir los pasos [6-8] de la "guia-comandos-git.txt" 
