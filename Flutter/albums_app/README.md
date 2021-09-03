@@ -1,16 +1,14 @@
 # albums_app
 
-A new Flutter project.
+Primer app creada con flutter.
 
-## Getting Started
+## Acerca de la App
 
-This project is a starting point for a Flutter application.
+Esta primer aplicación sirve para hacer [GET] y obtener información de una API de prueba que nos trae un listado de álbumes en formato JSON. Esta información es transformada a una lista que es representada en un ListView donde los atributos de cada álbum se muestra en un ListTile.
 
-A few resources to get you started if this is your first Flutter project:
+API de Albums: https://jsonplaceholder.typicode.com/albums/
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Documentación utilizada
+Flutter Cookbook: https://flutter.dev/docs/cookbook
+Qué es un ListView: https://api.flutter.dev/flutter/widgets/ListView-class.html
+Qué es un ListTile: https://api.flutter.dev/flutter/material/ListTile-class.html
