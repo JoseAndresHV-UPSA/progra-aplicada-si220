@@ -95,7 +95,7 @@ class _HomeState extends State<Home> {
               onPressed: () {
                 getData(int.parse(idController.text));
               }),
-          Expanded(child: Divider()),
+          Container(child: Divider()),
           TextFormField(
               controller: nameController,
               readOnly: true,
@@ -111,7 +111,7 @@ class _HomeState extends State<Home> {
               readOnly: true,
               decoration: InputDecoration(
                   hintText: "email:", border: InputBorder.none)),
-          Expanded(child: Divider()),
+          Container(child: Divider()),
           Text('Address:',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           TextFormField(
@@ -138,7 +138,7 @@ class _HomeState extends State<Home> {
             decoration:
                 InputDecoration(hintText: "zipcode:", border: InputBorder.none),
           ),
-          Expanded(child: Divider()),
+          Container(child: Divider()),
           Text('Geo:',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           TextFormField(
@@ -165,7 +165,7 @@ class _HomeState extends State<Home> {
             decoration:
                 InputDecoration(hintText: "website:", border: InputBorder.none),
           ),
-          Expanded(child: Divider()),
+          Container(child: Divider()),
           Text('Company:',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16)),
           TextFormField(
@@ -186,7 +186,7 @@ class _HomeState extends State<Home> {
             decoration:
                 InputDecoration(hintText: "bs:", border: InputBorder.none),
           ),
-          Expanded(child: Divider()),
+          Container(child: Divider()),
         ],
       ),
     );
