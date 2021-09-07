@@ -8,3 +8,4 @@ Además está la "guia-comandos-git.txt" en la que se encuentran los todos los c
 Esta es la lista de proyectos realizados en orden:
 1. albums_app
 2. user_app
+3. magic_app
