@@ -85,6 +85,8 @@
     </div>
     
     Nota: En "NombreControlador" poner el mismo nombre del controlador creado y en "NombreControlador" colocar el nombre que se mostrará en el NavBar.
+   
+10. Ejecutar y probar desde el navegador.
     
     
     
