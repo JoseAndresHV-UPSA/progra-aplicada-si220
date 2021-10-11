@@ -1,0 +1,73 @@
+*PASOS PARA LA CREACIÓN DE UNA WEBAPI*
+
+1. Crear nuevo proyecto: ASP.NET Core Web API
+
+2. Crear el directorio Models y dentro el modelo solicitado con sus debidos Data Annotation.
+   Nota: No olvidar colocar [Key] al atributo que corresponda a la llave principal.
+
+3. Agregar el ConnectionString en appsettings.json, debe quedar así:
+
+    {
+      "Logging": {
+        "LogLevel": {
+          "Default": "Information",
+          "Microsoft": "Warning",
+          "Microsoft.Hosting.Lifetime": "Information"
+        }
+      },
+      "AllowedHosts": "*",
+      "ConnectionStrings": {
+        "DbContext": "Poner el ConnString de la DB aquí"
+      }
+    }
+    
+    Nota: Obtener el ConnectionString desde la base de datos de azure.
+
+4. Agregar los debidos Paquetes NuGet:
+   Dependencies -> Manage NuGet Packages -> Buscar e instalar:
+      - EntityFrameworkCore
+      - EntityFrameworkCore.SqlServer
+      - EntityFrameworkCore.Tools
+
+5. Crear el directorio Data, dentro de este crear la clase AppDbContext:
+
+   public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+
+        }
+        
+        // Agregar los modelos a utilizar
+        public DbSet<Model> Model { get; set; }
+    }
+    
+ 6. Agregar el DbContext al archivo Startup.cs 
+    Dentro del método ConfigureServices:
+    
+    public void ConfigureServices(IServiceCollection services)
+    {
+        // DbContext
+        services.AddDbContext<AppDbContext>(options =>
+        options.UseSqlServer(Configuration.GetConnectionString("DbContext")));
+
+        services.AddControllers();
+        services.AddSwaggerGen(c =>
+        {
+            c.SwaggerDoc("v1", new OpenApiInfo { Title = "CancionesWebApi", Version = "v1" });
+        });
+    }
+
+7. Crear el Controller (API con acciones, usando EntityFramework)
+   Seleccionar el Model y el AppDbContext.
+   
+8. Migrar los modelos hacia la base de datos:
+   Tools -> NuGet Manager Package -> Package Manager Console:
+   Copiar los siguientes comandos: 
+   
+   PM> Add-Migration AddModel
+   PM> Update-Database
+   
+   Nota: No copiar el "PM>"
+   
+9. Ejecutar y probar desde Swagger.
