@@ -5,5 +5,5 @@ Podrás encontrar la "guia-webapp.txt" con todos los pasos a seguir para crear u
 
 ## Contenido 
 Esta es la lista de proyectos realizados en orden:
-1. Canciones (WebApp y WebApi)
-2. 
+1. CancionesWebApi
+2. CancionesWebApp
