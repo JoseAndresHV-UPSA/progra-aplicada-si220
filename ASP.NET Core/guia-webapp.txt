@@ -1,3 +1,97 @@
 *PASOS PARA LA CREACIÓN DE UNA WEBAPP*
 
-1. Crear nuevo proyecto: ASP.NET Core Web App
+1. Crear nuevo proyecto: ASP.NET Core Web App (Model-View-Controller)
+
+2. Crear el modelo solicitado y sus Data Annotation.
+
+3. Agregar el ConnectionString en appsettings.json, debe quedar así:
+
+    {
+      "Logging": {
+        "LogLevel": {
+          "Default": "Information",
+          "Microsoft": "Warning",
+          "Microsoft.Hosting.Lifetime": "Information"
+        }
+      },
+      "AllowedHosts": "*",
+      "ConnectionStrings": {
+        "DbContext": "Poner el ConnString de la DB aquí"
+      }
+    }
+
+4. Agregar los debidos Paquetes NuGet:
+   Dependencies -> Manage NuGet Packages -> Buscar e instalar:
+      - EntityFrameworkCore
+      - EntityFrameworkCore.SqlServer
+      - EntityFrameworkCore.Tools
+
+5. Crear el directorio Data, dentro de este crear la clase AppDbContext:
+
+   public class AppDbContext : DbContext
+    {
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+
+        }
+        
+        // Agregar los modelos a utilizar
+        public DbSet<Model> Model { get; set; }
+    }
+    
+ 6. Agregar el DbContext al archivo Startup.cs 
+    Dentro del método ConfigureServices:
+    
+    public void ConfigureServices(IServiceCollection services)
+    {
+        services.AddControllersWithViews();
+
+        // DbContext
+        services.AddDbContext<AppDbContext>(options => 
+        options.UseSqlServer(Configuration.GetConnectionString("DbContext")));
+    }
+
+7. Crear el Controller (MVC con Vistas, usando EntityFramework)
+   Seleccionar el modelo y el AppDbContext.
+   
+8. Migrar los modelos hacia la base de datos:
+   Tools -> NuGet Manager Package -> Package Manager Console:
+   Copiar los siguientes comandos: 
+   
+   PM> Add-Migration AddModel
+   PM> Update-Database
+   
+   Nota: No copiar el "PM>"
+   
+9. Editar el _Layout para poder acceder a las vistas desde el navbar:
+   Localizar el navbar, debe ser similar a este:   
+   
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+          <ul class="navbar-nav flex-grow-1">
+              <li class="nav-item">
+                  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+              </li>
+              
+              <!-- Model Navbar: Agregar la siguiente opción: -->
+              
+              <li class="nav-item">
+                  <a class="nav-link text-dark" asp-area="" asp-controller="NombreControlador" asp-action="Index">NombreAMostrar</a>
+              </li>
+              
+          </ul>
+    </div>
+    
+    Nota: En "NombreControlador" poner el mismo nombre del controlador creado y en "NombreControlador" colocar el nombre que se mostrará en el NavBar.
+   
+10. Ejecutar y probar desde el navegador.
+    
+    
+    
+    
+    
+    
+    
+    
