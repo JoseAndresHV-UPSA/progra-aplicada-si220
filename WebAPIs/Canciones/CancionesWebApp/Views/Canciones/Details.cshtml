@@ -1,0 +1,36 @@
+﻿@model CancionesWebApp.Models.Cancion
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Cancion</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Autor)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Autor)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Letra)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Letra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Enlace)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Enlace)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Nombre">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<CancionesWebApp.Models.Cancion>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Autor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Letra)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Enlace)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Autor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Letra)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Enlace)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Nombre">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Nombre">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Nombre">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
