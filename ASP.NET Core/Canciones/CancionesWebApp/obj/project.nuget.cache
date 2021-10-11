@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+3A8m/OavDBw5uOUJmCk/eIuNpocqyqoceGDNih3dKyl8ybfIbZwD/WB/3Hu0XrUHrjuA3AKOk98CLNLlSLvAw==",
+  "dgSpecHash": "xNATlo3ZYnQ+oXJppOLbvoC5DuHKKG8KfulABitU2hy6Y/iOaIsNO/DyZrzGtLc2GM6kM2F3DtlUaImDWVQepw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\josea\\source\\repos\\progra-aplicada-si220\\WebAPIs\\Canciones\\CancionesWebApp\\CancionesWebApp.csproj",
+  "projectFilePath": "C:\\Users\\josea\\source\\repos\\progra-aplicada-si220\\ASP.NET Core\\Canciones\\CancionesWebApp\\CancionesWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\josea\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\josea\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

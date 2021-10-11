@@ -7155,11 +7155,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\josea\\source\\repos\\progra-aplicada-si220\\WebAPIs\\Canciones\\CancionesWebApp\\CancionesWebApp.csproj",
+      "projectUniqueName": "C:\\Users\\josea\\source\\repos\\progra-aplicada-si220\\ASP.NET Core\\Canciones\\CancionesWebApp\\CancionesWebApp.csproj",
       "projectName": "CancionesWebApp",
-      "projectPath": "C:\\Users\\josea\\source\\repos\\progra-aplicada-si220\\WebAPIs\\Canciones\\CancionesWebApp\\CancionesWebApp.csproj",
+      "projectPath": "C:\\Users\\josea\\source\\repos\\progra-aplicada-si220\\ASP.NET Core\\Canciones\\CancionesWebApp\\CancionesWebApp.csproj",
       "packagesPath": "C:\\Users\\josea\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\josea\\source\\repos\\progra-aplicada-si220\\WebAPIs\\Canciones\\CancionesWebApp\\obj\\",
+      "outputPath": "C:\\Users\\josea\\source\\repos\\progra-aplicada-si220\\ASP.NET Core\\Canciones\\CancionesWebApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
