@@ -11,3 +11,4 @@ Esta es la lista de proyectos realizados en orden:
 3. magic_app
 4. baraja_app
 5. dados_app
+6. final_app
