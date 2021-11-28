@@ -7,3 +7,4 @@ Podrás encontrar la "guia-webapp.txt" con todos los pasos a seguir para crear u
 Esta es la lista de proyectos realizados en orden:
 1. CancionesWebApi
 2. CancionesWebApp
+3. JWTCoreAPI
